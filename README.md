@@ -167,6 +167,40 @@ Represents feedback provided by users for properties.
 - A user can leave multiple reviews (One-to-Many)
 - A property can have multiple reviews (One-to-Many)
 
+## 🔒 API Security
+
+Securing the backend APIs is a critical aspect of the Airbnb Clone project to ensure user trust, data integrity, and secure financial transactions.
+
+### 🔑 Key Security Measures
+
+1. **Authentication**
+   - We implement secure authentication using token-based systems such as JWT (JSON Web Tokens) or OAuth2.
+   - Only registered and verified users can access protected endpoints.
+
+2. **Authorization**
+   - Role-based access control (RBAC) ensures users can only perform actions they are permitted to (e.g., only hosts can list properties, only property owners can update/delete listings).
+   - Access to sensitive endpoints is restricted based on user roles and ownership.
+
+3. **Rate Limiting**
+   - To prevent abuse and denial-of-service (DoS) attacks, rate limiting is applied to all API endpoints using tools like Django Ratelimit or third-party middleware.
+
+4. **Data Validation & Sanitization**
+   - All inputs are validated and sanitized to protect against common attacks such as SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).
+
+5. **HTTPS Enforcement**
+   - All communications are encrypted using HTTPS to protect data in transit.
+
+6. **Secure Payments**
+   - Integration with trusted third-party payment providers ensures secure handling of financial data.
+   - Sensitive payment details are never stored directly in our system.
+
+### 🛡️ Why Security is Crucial
+
+- **Protecting User Data:** User credentials, personal information, and contact details must be securely handled to maintain privacy and prevent identity theft.
+- **Securing Payments:** Unauthorized access or tampering with financial transactions can lead to fraud or monetary loss.
+- **Maintaining Platform Trust:** A secure API builds user confidence and trust in the platform.
+- **Preventing Abuse:** Rate limiting and role-based permissions help mitigate spam, brute-force attacks, and misuse of the platform.
+
 
 ## 📌 Endpoints Overview
 
