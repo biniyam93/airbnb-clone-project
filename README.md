@@ -83,12 +83,90 @@ The backend is designed to serve as a scalable, secure, and performant foundatio
 
 ---
 
-## 📈 API Documentation Overview
+## 🗂️ Database Design
 
-- **REST API:** Fully documented with OpenAPI/Swagger.
-- **GraphQL API:** Flexible query interface for frontend integration.
+This section outlines the core entities in the Airbnb Clone backend along with their key fields and relationships.
+
+### 1. Users
+Represents individuals who can list properties or make bookings.
+
+**Key Fields:**
+- `id`: Unique identifier for the user
+- `username`: Unique username
+- `email`: User's email address
+- `password`: Hashed password
+- `is_host`: Boolean indicating if the user is a host
+
+**Relationships:**
+- A user can list multiple properties (One-to-Many)
+- A user can make multiple bookings (One-to-Many)
+- A user can write multiple reviews (One-to-Many)
 
 ---
+
+### 2. Properties
+Represents properties listed by hosts for booking.
+
+**Key Fields:**
+- `id`: Unique identifier for the property
+- `title`: Name or title of the listing
+- `description`: Detailed description of the property
+- `price_per_night`: Cost per night
+- `host_id`: Foreign key linking to the user who listed it
+
+**Relationships:**
+- A property is listed by one host (Many-to-One)
+- A property can have multiple bookings (One-to-Many)
+- A property can have multiple reviews (One-to-Many)
+
+---
+
+### 3. Bookings
+Represents a reservation made by a user on a property.
+
+**Key Fields:**
+- `id`: Unique booking ID
+- `user_id`: Foreign key to the user who made the booking
+- `property_id`: Foreign key to the booked property
+- `start_date`: Check-in date
+- `end_date`: Check-out date
+
+**Relationships:**
+- A booking is made by one user (Many-to-One)
+- A booking belongs to one property (Many-to-One)
+- A booking can have one payment (One-to-One)
+
+---
+
+### 4. Payments
+Represents the financial transactions for bookings.
+
+**Key Fields:**
+- `id`: Unique payment ID
+- `booking_id`: Foreign key to the associated booking
+- `amount`: Total payment amount
+- `status`: Payment status (e.g., completed, pending)
+- `payment_method`: Method used (e.g., card, PayPal)
+
+**Relationships:**
+- Each payment is associated with one booking (One-to-One)
+
+---
+
+### 5. Reviews
+Represents feedback provided by users for properties.
+
+**Key Fields:**
+- `id`: Unique review ID
+- `user_id`: Foreign key to the user who wrote the review
+- `property_id`: Foreign key to the reviewed property
+- `rating`: Numerical rating (e.g., 1-5)
+- `comment`: Text feedback
+
+**Relationships:**
+- A user can leave multiple reviews (One-to-Many)
+- A property can have multiple reviews (One-to-Many)
+
 
 ## 📌 Endpoints Overview
 
