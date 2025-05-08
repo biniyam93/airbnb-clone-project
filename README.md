@@ -1,5 +1,3 @@
-# airbnb-clone-project
-
 # Airbnb Clone Project
 
 A full-stack clone of Airbnb built to enhance backend development, CI/CD automation, and modern deployment practices.
