@@ -200,6 +200,30 @@ Securing the backend APIs is a critical aspect of the Airbnb Clone project to en
 - **Securing Payments:** Unauthorized access or tampering with financial transactions can lead to fraud or monetary loss.
 - **Maintaining Platform Trust:** A secure API builds user confidence and trust in the platform.
 - **Preventing Abuse:** Rate limiting and role-based permissions help mitigate spam, brute-force attacks, and misuse of the platform.
+## 🚀 CI/CD Pipeline
+
+### What is CI/CD?
+
+CI/CD stands for **Continuous Integration** and **Continuous Deployment/Delivery**. It is a development practice where code changes are automatically tested and deployed, enabling teams to deliver updates faster and more reliably.
+
+- **Continuous Integration (CI):** Automatically runs tests and checks every time code is pushed to the repository, ensuring new changes do not break the existing codebase.
+- **Continuous Deployment (CD):** Automatically deploys code to staging or production environments after passing all tests and checks.
+
+### Why CI/CD is Important for This Project
+
+- **Faster Development Cycles:** Automates the build, test, and deployment process.
+- **Improved Code Quality:** Catch bugs early through automated testing.
+- **Reduced Manual Errors:** Removes the need for manual deployment steps.
+- **Consistent Environments:** Ensures applications run in the same way across different environments using Docker.
+- **Instant Feedback:** Developers receive immediate feedback on their code.
+
+### 🧰 Tools Used
+
+- **GitHub Actions:** Automates CI/CD workflows directly from the GitHub repository (e.g., testing, linting, deployment).
+- **Docker:** Ensures consistent build and runtime environments across machines and environments.
+- **Docker Hub / GitHub Container Registry:** Stores and distributes Docker images for different environments.
+- **Heroku / AWS / Render (optional):** Platforms to host and deploy the application automatically after each successful build.
+
 
 
 ## 📌 Endpoints Overview
