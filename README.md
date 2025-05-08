@@ -21,7 +21,7 @@ The backend is designed to serve as a scalable, secure, and performant foundatio
 
 ---
 
-## 🛠️ Features Overview
+## 🛠️ Feature Breakdown
 
 ### 1. API Design & Documentation
 
